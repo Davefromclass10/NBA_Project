@@ -14,7 +14,7 @@ shiny::shinyUI(pageWithSidebar(
                 "test/comma-separated-values,text/plain",
                 ".csv")
               ),
-              tag$slugTeam(),
+              tags$hr(),
               selectInput('variable', 'Team:', TRUE)
               
   ),
