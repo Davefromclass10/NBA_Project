@@ -24,9 +24,5 @@ Player_Hustle <- PlayerBoxScores[,c("obs","idGame","slugTeam","namePlayer","idPl
 shiny::shinyServer(function(input, output){
   
   
-  output$contents <- renderTable({
-    inFile <- input$file1
-    
-    read.csv(inFile$datapath, header = input$header)
-  })
+  output$pointsPlot <- renderTable(Player_Traditional)
 })

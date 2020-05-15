@@ -20,8 +20,6 @@ shiny::shinyUI(pageWithSidebar(
   ),
   
   mainPanel(
-    tabsetPanel(
-      tabPanel('Team Points',
-               dataTableOutput("contents"))
-    ))
+    tableOutput('pointsPlot')
+  )
 ))
