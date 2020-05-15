@@ -7,7 +7,12 @@ shiny::shinyUI(pageWithSidebar(
   #Title
   headerPanel('Denver Nuggets Post Game Breakdown'),
   
-  sidebarPanel(),
+  sidebarPanel(
+    selectInput('variable', 'Team:',
+                list('Denver' = 'DEN',
+                     'Houston' = 'HOU',
+                     'Portland' = 'POR'))
+  ),
   
   mainPanel()
 ))
