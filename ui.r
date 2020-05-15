@@ -9,7 +9,7 @@ shiny::shinyUI(pageWithSidebar(
   
   sidebarPanel(
     selectInput('variable', 'Team:',
-                list(unique(Player_BoxScores2020$slugTeam)))
+                list('Denver' = "DEN"))
               
   ),
   
