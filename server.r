@@ -26,5 +26,5 @@ Player_Traditional['slugTeam'] <- as.character(Player_Traditional['slugTeam'])
 shiny::shinyServer(function(input, output){
   
   
-  output$pointsPlot <- renderTable(Player_Traditional[, which(Player_Traditional['slugTeam']) == input$variable])
+  output$pointsPlot <- renderTable(Player_Traditional)
 })

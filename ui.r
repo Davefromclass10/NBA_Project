@@ -8,9 +8,12 @@ shiny::shinyUI(pageWithSidebar(
   headerPanel('Denver Nuggets Post Game Breakdown'),
   
   sidebarPanel(
-    selectInput('variable', 'Team:',
-                list('Denver' = "DEN"))
-              
+    checkboxGroupInput(
+      inputId = 'slugTeam',
+      label = 'Team',
+      choices = slugTeam,
+      inline = FALSE
+    )
   ),
   
   mainPanel(
