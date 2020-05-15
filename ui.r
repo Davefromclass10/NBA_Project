@@ -11,7 +11,7 @@ shiny::shinyUI(pageWithSidebar(
     checkboxGroupInput(
       inputId = 'slugTeam',
       label = 'Team',
-      choices = slugTeam,
+      choices = Player_BoxScore2020$slugTeam,
       inline = FALSE
     )
   ),
