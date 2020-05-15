@@ -20,6 +20,6 @@ shiny::shinyUI(pageWithSidebar(
   ),
   
   mainPanel(
-    tableOutput('pointsPlot')
+    fluidRow(tableOutput('pointsPlot')
   )
-))
+)))
