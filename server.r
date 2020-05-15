@@ -1,5 +1,6 @@
 library(shiny)
 library(dplyr)
+library(ggplot2)
 
 
 PlayerBoxScores <- read.csv(file = 'Player_BoxScores2020.csv')
@@ -23,7 +24,9 @@ Player_Hustle <- PlayerBoxScores[,c("obs","idGame","slugTeam","namePlayer","idPl
 shiny::shinyServer(function(input, output){
   
   
-  output$teamSummary <- renderTable(
-    Player_Traditional %>% group_by(input$slugTeam)
-  )
+  output$contents <- renderTable({
+    inFile <- input$file1
+    
+    read.csv(inFile$datapath, header = input$header)
+  })
 })

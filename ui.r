@@ -8,15 +8,20 @@ shiny::shinyUI(pageWithSidebar(
   headerPanel('Denver Nuggets Post Game Breakdown'),
   
   sidebarPanel(
-    selectInput('variable', 'Team:',
-                list('Denver' = 'DEN',
-                     'Houston' = 'HOU',
-                     'Portland' = 'POR'))
+    fileInput('Player_BoxScores2020', "Choose CSV File",
+              accept = c(
+                "text/csv",
+                "test/comma-separated-values,text/plain",
+                ".csv")
+              ),
+              tag$slugTeam(),
+              selectInput('variable', 'Team:', TRUE)
+              
   ),
   
   mainPanel(
     tabsetPanel(
       tabPanel('Team Points',
-               dataTableOutput("teamSummary"))
+               dataTableOutput("contents"))
     ))
 ))
