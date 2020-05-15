@@ -21,6 +21,8 @@ Player_Tracking <- PlayerBoxScores[,c("obs","idGame","slugTeam","namePlayer","id
 
 Player_Hustle <- PlayerBoxScores[,c("obs","idGame","slugTeam","namePlayer","idPlayer","groupStartPosition","minExact","screenAssist","ptsScreenAssist","deflections","looseBallsRecoveredOffense","looseBallsRecoveredDefense","looseBallsRecovered","chargesDrawn","fg2Contested","fg3Contested","fgContested","boxOutsOffense","boxOutsDefense","boxOuts")]
 
+Player_Traditional['slugTeam'] <- as.factor(Player_Traditional['slugTeam'])
+
 shiny::shinyServer(function(input, output){
   
   
