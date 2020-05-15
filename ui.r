@@ -14,5 +14,9 @@ shiny::shinyUI(pageWithSidebar(
                      'Portland' = 'POR'))
   ),
   
-  mainPanel()
+  mainPanel(
+    tabsetPanel(
+      tabPanel('Team Points',
+               dataTableOutput("teamSummary"))
+    ))
 ))
