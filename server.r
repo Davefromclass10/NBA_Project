@@ -24,6 +24,6 @@ shiny::shinyServer(function(input, output){
   
   
   output$teamSummary <- renderTable(
-    Player_Traditional %>% group_by(slugTeam)
+    Player_Traditional %>% group_by(input$slugTeam)
   )
 })
