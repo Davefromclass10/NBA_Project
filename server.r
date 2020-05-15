@@ -24,5 +24,5 @@ Player_Hustle <- PlayerBoxScores[,c("obs","idGame","slugTeam","namePlayer","idPl
 shiny::shinyServer(function(input, output){
   
   
-  output$pointsPlot <- renderTable(Player_Traditional %>% group_by(input$variable))
+  output$pointsPlot <- renderTable(Player_Traditional[, group_by(input$variable)])
 })
