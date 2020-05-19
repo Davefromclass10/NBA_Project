@@ -12,12 +12,8 @@ shiny::shinyUI(pageWithSidebar(
   headerPanel('Denver Nuggets Post Game Breakdown'),
   
   sidebarPanel(
-    checkboxGroupInput(
-      inputId = 'slugTeam',
-      label = 'Team',
-      choices = BoxScores_Traditional2020$slug_team,
-      inline = FALSE
-    )
+    selectInput('variable', 'Team:',
+                list('Denver' = 'DEN'))
   ),
   
   mainPanel(

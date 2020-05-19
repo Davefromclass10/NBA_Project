@@ -7,3 +7,6 @@ BoxScores_Traditional2020 <- BoxScores2020[,c("X","idGame","slugTeam","namePlaye
 
 BoxScores_Traditional2020 <- janitor::clean_names(BoxScores_Traditional2020,
                                                   'snake')
+
+
+teams <- unique(as.character(BoxScores_Traditional2020$slug_team))
