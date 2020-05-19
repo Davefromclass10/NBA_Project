@@ -10,5 +10,5 @@ shiny::shinyServer(function(input, output){
     req(input$slugTeam)
   })
   
-  output$pointsPlot <- renderTable(Box)
+  output$pointsPlot <- renderTable(BoxScores_Traditional2020)
 })
